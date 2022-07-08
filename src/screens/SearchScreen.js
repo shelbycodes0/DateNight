@@ -18,6 +18,7 @@ const SearchScreen = () => {
 
   return (
     <View style={{ flex: 1 }}>
+      <Text style={styles.header}>Where should we go?</Text>
       <SearchBar
         term={term}
         onTermChange={setTerm}
@@ -38,10 +39,10 @@ const SearchScreen = () => {
           results={filterResultsByPrice("$$$")}
           title="Big Spender Dates"
         />
-        {/* <ResultsList
+        <ResultsList
           results={filterResultsByPrice("$$$$")}
           title="Most Expensive Dates"
-        /> */}
+        />
         <Text style={styles.Spacer}> </Text>
       </ScrollView>
     </View>
@@ -50,6 +51,12 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
   Spacer: {
     paddingBottom: 20,
+  },
+  header: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginLeft: 20,
+    marginTop: 15,
   },
 });
 
